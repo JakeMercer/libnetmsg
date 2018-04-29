@@ -50,3 +50,25 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Autotools generated files
+aclocal.m4
+autom4te.cache/
+build-aux/
+config.h.in
+configure
+m4/
+Makefile.in
+.libs/
+Makefile
+config.h
+config.log
+config.status
+doc/Doxyfile
+ethernet_TEST
+libtool
+source/.deps/
+source/.dirstamp
+stamp-h1
+test/.deps/
+test/.dirstamp

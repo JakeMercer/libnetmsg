@@ -1,15 +1,16 @@
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 lib_LTLIBRARIES = libnetmsg.la
-libnetmsg_la_SOURCES = source/foo.cpp
+libnetmsg_la_SOURCES = source/utilities.h \
+					   source/ethernet.c
 
-include_HEADERS = include/foo.hpp
+include_HEADERS = include/ethernet.h
 
-TESTS = testA
-testA_SOURCES = test/test.cpp
-testA_LDADD = libnetmsg.la
+TESTS = ethernet_TEST
+ethernet_TEST_SOURCES = test/ethernet.c
+ethernet_TEST_LDADD = libnetmsg.la
 
-noinst_PROGRAMS = testA
+noinst_PROGRAMS = $(TESTS)
 
 #if HAVE_DOXYGEN
 #directory = $(top_srcdir)/doc/man/man3
